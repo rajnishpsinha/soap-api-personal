@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:tns="http://demo.project/countries"
+           targetNamespace="http://demo.project/countries"
+           elementFormDefault="qualified">
+
+    <!-- Request -->
+    <xs:element name="GetCountryRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="countryCode" type="xs:string"/>
+                <xs:element name="language"    type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!-- Response -->
+    <xs:element name="GetCountryResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="countryName" type="xs:string"/>
+                <xs:element name="capital"     type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+</xs:schema>
